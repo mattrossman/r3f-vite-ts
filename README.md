@@ -11,6 +11,6 @@ npx tiged mattrossman/r3f-vite-ts
 ## Setup and run
 
 ```console
-yarn
-yarn dev
+bun install
+bun dev
 ```
