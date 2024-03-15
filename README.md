@@ -1,16 +1,7 @@
-# r3f-vite-ts
-
-React-Three-Fiber template using Vite and Typescript.
-
-## Copy template
+# React-Three-Fiber + Vite + TypeScript Template
 
 ```console
 npx tiged mattrossman/r3f-vite-ts
 ```
 
-## Setup and run
-
-```console
-bun install
-bun dev
-```
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/mattrossman/r3f-vite-ts)
