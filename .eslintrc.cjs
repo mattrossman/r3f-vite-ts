@@ -7,10 +7,15 @@ module.exports = {
     "plugin:react-hooks/recommended",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
-  parser: "@typescript-eslint/parser",
   plugins: ["react-refresh"],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    projectService: true,
+    tsconfigRootDir: __dirname,
+  },
   rules: {
     "no-constant-condition": ["error", { checkLoops: false }],
+    "react-hooks/exhaustive-deps": "error",
     "react-refresh/only-export-components": [
       "warn",
       { allowConstantExport: true },
@@ -19,6 +24,22 @@ module.exports = {
       "warn",
       { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
     ],
-    "@typescript-eslint/consistent-type-imports": "warn",
+    "@typescript-eslint/consistent-type-imports": [
+      "warn",
+      {
+        prefer: "type-imports",
+        fixStyle: "inline-type-imports",
+      },
+    ],
+    "@typescript-eslint/no-floating-promises": "warn",
+    "@typescript-eslint/no-misused-promises": [
+      2,
+      {
+        checksVoidReturn: {
+          attributes: false,
+        },
+      },
+    ],
+    "@typescript-eslint/switch-exhaustiveness-check": "error",
   },
 }
